@@ -16,14 +16,9 @@ export class Tides extends Component {
 		const today = moment().format('YYYYMMDD');
 
 		// const proxy = "https://suspicious-goldwasser-9396bb.netlify.app";
-		const proxy = "http://localhost:3000/"
-
-		const url = `https://suspicious-goldwasser-9396bb.netlify.app/https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
 
 
-		// const url = `https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
-
-
+		const url = `https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
 
 
 		axios.get(url).then(res => {
