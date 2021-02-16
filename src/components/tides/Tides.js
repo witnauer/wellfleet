@@ -15,12 +15,13 @@ export class Tides extends Component {
 	componentDidMount() {
 		const today = moment().format('YYYYMMDD');
 
-		// "proxy": "https://tidesandcurrents.noaa.gov",
+		// const proxy = "https://suspicious-goldwasser-9396bb.netlify.app";
+		const proxy = "http://localhost:3000/"
 
-		// const url = `/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
+		const url = `https://suspicious-goldwasser-9396bb.netlify.app/https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
 
 
-		const url = `https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
+		// const url = `https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
 
 
 
