@@ -1,15 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Tides from './components/tides/Tides';
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					testing update deployments.
-        </p>
-			</header>
+			<Tides />
 		</div>
 	);
 }
