@@ -13,7 +13,7 @@ export class TideItem extends Component {
 				{ index < 2 &&
 					<ListItem divider>
 						<ListItemText primary={time} />
-						<ListItemSecondaryAction>{(tide.height * 3.28084).toFixed(1)} FT</ListItemSecondaryAction>
+						<ListItemSecondaryAction>{(tide.height * 3.28084).toFixed(2)} FT</ListItemSecondaryAction>
 					</ListItem>
 				}
 			</div>
