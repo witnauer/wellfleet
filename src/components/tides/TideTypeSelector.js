@@ -13,9 +13,9 @@ export class TideTypeSelector extends Component {
 		const lowTides = [];
 		const highTides = [];
 		predictions.forEach((prediction) => {
-			if (prediction.type === "L") {
+			if (prediction.type === "Low") {
 				lowTides.push({ prediction });
-			} else if (prediction.type === "H") {
+			} else if (prediction.type === "High") {
 				highTides.push({ prediction });
 			} else return;
 		});

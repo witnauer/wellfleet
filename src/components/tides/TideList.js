@@ -9,7 +9,7 @@ export class TideList extends Component {
 			<List>
 				{tides.map((tide, index) => {
 					return (
-						<TideItem tide={tide.prediction} key={index} />
+						<TideItem tide={tide.prediction} key={index} index={index} />
 					)
 				})}
 			</List>

@@ -13,16 +13,13 @@ export class Tides extends Component {
 	};
 
 	componentDidMount() {
-		const today = moment().format('YYYYMMDD');
+		const today = moment().format('YYYY-MM-DD');
 
-		// const proxy = "https://suspicious-goldwasser-9396bb.netlify.app";
-
-
-		const url = `https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=TIDELY&begin_date=${today}&end_date=${today}&datum=MLLW&station=8446613&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
+		const url = `https://www.worldtides.info/api/v2?extremes&date=${today}&days=2&localtime&datum=MLLW&lat=41.931330&lon=-70.019140&key=ffd0d3cc-4491-46fd-989a-b68191f1b166`
 
 
 		axios.get(url).then(res => {
-			this.setState({ predictions: res.data.predictions })
+			this.setState({ predictions: res.data.extremes })
 		}).catch(err => {
 			console.log(err);
 		});
