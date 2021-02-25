@@ -49,6 +49,7 @@ export class Tides extends Component {
 				<Box my={3} />
 				<TideTypeSelector predictions={this.state.predictions} />
 				<Box my={3} />
+				<Typography variant='h2' align='center'>Solar Times</Typography>
 				<Typography variant='body2' align='center'>Sunrise: {this.state.sunrise}</Typography>
 				<Typography variant='body2' align='center'>Sunset: {this.state.sunset}</Typography>
 			</div>
