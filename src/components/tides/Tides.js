@@ -44,11 +44,11 @@ export class Tides extends Component {
 		return (
 			<div>
 				<Box my={3} />
-				<Typography variant="h5" align='center'>Wellfleet Tides</Typography>
-				<Typography variant='body2' align='center'>{displayDate}</Typography>
-				<Box my={3} />
+				<Typography variant="h2" align='center'>Wellfleet Tides</Typography>
+				<Typography variant='h4' align='center'>{displayDate}</Typography>
+				<Box my={5} />
 				<TideTypeSelector predictions={this.state.predictions} />
-				<Box my={3} />
+				<Box my={5} />
 				<Typography variant='h2' align='center'>Solar Times</Typography>
 				<Typography variant='body2' align='center'>Sunrise: {this.state.sunrise}</Typography>
 				<Typography variant='body2' align='center'>Sunset: {this.state.sunset}</Typography>
