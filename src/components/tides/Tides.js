@@ -15,17 +15,13 @@ export class Tides extends Component {
 	componentDidMount() {
 		const today = moment().format('YYYY-MM-DD');
 
-		const url = `https://www.worldtides.info/api/v2?extremes&date=${today}&days=2&localtime&datum=MLLW&lat=41.931330&lon=-70.019140&key=ffd0d3cc-4491-46fd-989a-b68191f1b166`
-
-
-		axios.get(url).then(res => {
-			this.setState({ predictions: res.data.extremes })
-		}).catch(err => {
-			console.log(err);
-		});
+		fetch(`/.netlify/functions/fetch-tides?today=${today}`)
+			.then((res) => res.json())
+			.then((tides) => {
+				this.setState({ predictions: tides.extremes });
+			})
 
 		const sunUrl = "https://api.sunrise-sunset.org/json?lat=41.936100&lng=-70.043671&formatted=0";
-
 
 		axios.get(sunUrl).then(res => {
 			this.setState({ sun: res.data.results });
